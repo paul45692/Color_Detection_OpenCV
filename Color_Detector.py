@@ -4,19 +4,19 @@ import numpy as np
 class ColorDetector:
     
     def detect_Red_Color(self, image):
-        # Define ranges for the blue color
+        # Define ranges for the red color
         lowerRange = np.array([160, 155, 84])
         upperRange = np.array([179, 255, 255])
         return cv2.inRange(image, lowerRange, upperRange).any()
 
     def detect_Green_Color(self, image):
-        # Define ranges for the blue color
+        # Define ranges for the green color
         lowerRange = np.array([46, 52, 72])
         upperRange = np.array([100, 255, 255])
         return cv2.inRange(image, lowerRange, upperRange).any()
 
     def detect_Blue_Color(self, image):
         # Define ranges for the blue color
-        lowerRange = np.array([100, 50,0])
+        lowerRange = np.array([101, 50,0])
         upperRange = np.array([140,255,255])
         return cv2.inRange(image, lowerRange, upperRange).any()
