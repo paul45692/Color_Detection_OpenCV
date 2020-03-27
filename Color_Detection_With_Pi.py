@@ -1,6 +1,6 @@
 from picamera import PiCamera
 from time import sleep
-from Color_Detector import *
+from Color_Detector import ColorDetector
 import cv2
 
     # This function only works with the raspberry Pi Camera
@@ -18,13 +18,13 @@ takePictureWithPi(image_name)
 img_path = 'home/pi/Desktop/' + image_name + '.jpg'
 image_orginal = cv2.imread(img_path)
 image = cv2.cv2.cvtColor(image_orginal,cv2.COLOR_BGR2HSV)
-detector = Color_Detector()
+detector = ColorDetector()
 # Detecting the color in the image
 if detector.detect_Red_Color(image):
     print("Der Legostein hat die Farbe Rot!")
-elif dectector.detect_Green_Color(image):    
+elif detector.detect_Green_Color(image):    
     print("Der Legostein hat die Farbe Grün!")
-elif  dectector.detect_Blue_Color(image):   
+elif  detector.detect_Blue_Color(image):   
     print("Der Legostein hat die Farbe Grün!")   
 else                                    :
     print("Die Farbe des Stein wurde nicht erkannt.")    
