@@ -14,6 +14,6 @@ B. Problem of classify the bricks by the brick size
 - Step 1: Convert the image into a grayed image for better processing performances
 - Step 2: Perform edge detection with cv2.canny()
 - Step 3: Based on the edges in the image perform contours detection in the image
-- Step 4: Calculate the number of contours in the image
-    - For the size 2 x 4 we can found more than 10 contours - > Big brick
-    - For the size 2 x 2 we can found less than 5 contours -> Small brick
+- Step 4: Calculate the number of contours in the image:
+    - For the size 2 x 4 the image contains more than ten contours -> Big brick
+    - For the size 2 x 2 the image contains less than 5 contours -> Small brick
